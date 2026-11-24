@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า — LANUVA</title>
+  <meta name="description" content="สั่งซื้อยาสระผม LANUVA Scent &amp; Silk">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ส่วนเฉพาะหน้าสั่งซื้อ (ใช้ token จาก style.css) */
+    .page-title { font-size: var(--fs-xl); margin-bottom: 0; }
+
+    .order-panel {
+      max-width: 36rem;
+      margin-inline: auto;
+      padding: var(--sp-5) var(--sp-4);
+      background: var(--white);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+    }
+    .order-panel textarea { resize: vertical; min-height: 5rem; }
+    .order-panel .field:last-of-type { margin-bottom: var(--sp-4); }
+    .order-panel .hint { margin: var(--sp-1) 0 0; font-size: var(--fs-xs); color: var(--ink-faint); }
+
+    @media (max-width: 48rem) {
+      .order-panel { padding: var(--sp-4) var(--sp-3); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head text-center">
+          <h1 class="page-title">สั่งซื้อสินค้า</h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p>กรอกข้อมูลด้านล่าง เราจะติดต่อกลับเพื่อยืนยันการสั่งซื้อและการจัดส่ง</p>
+        </div>
+
+        <div class="order-panel">
+          <form id="orderForm" novalidate>
+            <div class="field">
+              <label for="customerName">ชื่อลูกค้า</label>
+              <input type="text" id="customerName" name="customerName" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="contact">เบอร์โทร / Line</label>
+              <input type="text" id="contact" name="contact" autocomplete="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="items">รายการสินค้า</label>
+              <input type="text" id="items" name="items" required>
+            </div>
+
+            <div class="field">
+              <label for="total">จำนวนเงินรวม (บาท)</label>
+              <input type="text" id="total" name="total" inputmode="decimal" required>
+              <p class="hint">เติมให้อัตโนมัติจากสินค้าที่เลือก หากสั่งหลายชิ้นสามารถแก้ไขได้</p>
+            </div>
+
+            <div class="field">
+              <label for="note">หมายเหตุ</label>
+              <textarea id="note" name="note" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--solid btn--block">ยืนยันสั่งซื้อ</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <p style="margin-top: var(--sp-2);">Scent &amp; Silk ผมนุ่มลื่นดุจแพรไหม หอมละมุนจากธรรมชาติตลอดวัน</p>
+      <div class="footer-bottom">&copy; 2026 LANUVA</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

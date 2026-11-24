@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>รายการสั่งซื้อ — LANUVA Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ส่วนเฉพาะหน้าแอดมิน (ใช้ token จาก style.css) */
+    .page-title { font-size: var(--fs-xl); margin-bottom: 0; }
+
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--white);
+      border: 1px solid var(--line-soft);
+      border-radius: var(--radius);
+    }
+
+    #ordersTable {
+      width: 100%;
+      min-width: 52rem;
+      border-collapse: collapse;
+      font-size: var(--fs-sm);
+      line-height: 1.7;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+      padding: var(--sp-2) var(--sp-3);
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    #ordersTable thead th {
+      font-family: var(--font-serif-th);
+      font-weight: 400;
+      color: var(--ink);
+      white-space: nowrap;
+      background: var(--cream);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    #ordersTable tbody tr:last-child td { border-bottom: 0; }
+    #ordersTable tbody tr:hover td { background: var(--ivory); }
+
+    #ordersTable td { color: var(--ink-soft); }
+    #ordersTable td:nth-child(1) { white-space: nowrap; }
+    #ordersTable td:nth-child(5) { white-space: nowrap; color: var(--gold-deep); }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head">
+          <h1 class="page-title">รายการสั่งซื้อ</h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p>เรียงจากรายการล่าสุดขึ้นก่อน</p>
+        </div>
+
+        <div class="table-wrap">
+          <table id="ordersTable">
+            <thead>
+              <tr>
+                <th scope="col">วันเวลา</th>
+                <th scope="col">ชื่อลูกค้า</th>
+                <th scope="col">เบอร์โทร/Line</th>
+                <th scope="col">รายการสินค้า</th>
+                <th scope="col">จำนวนเงินรวม</th>
+                <th scope="col">หมายเหตุ</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <div class="footer-bottom">&copy; 2026 LANUVA</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

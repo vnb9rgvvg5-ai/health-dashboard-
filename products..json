@@ -1,0 +1,22 @@
+[
+  {
+    "id": "lanuva-rose-100",
+    "name": "ยาสระผม LANUVA Rose",
+    "mood": "rose",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 89,
+    "image": "images/rose.jpg",
+    "description": "ยาสระผมกลิ่นกุหลาบอ่อนละมุน ทำความสะอาดเส้นผมอย่างนุ่มนวล ให้ผมสัมผัสนุ่มและมีกลิ่นหอมติดทนตลอดวัน"
+  },
+  {
+    "id": "lanuva-lavender-100",
+    "name": "ยาสระผม LANUVA Lavender",
+    "mood": "lavender",
+    "type": "shampoo",
+    "size": "100ml",
+    "price": 89,
+    "image": "images/lavender.jpg",
+    "description": "ยาสระผมกลิ่นลาเวนเดอร์สงบนิ่ง ช่วยให้การสระผมเป็นช่วงเวลาผ่อนคลาย เส้นผมสะอาด นุ่มสบายหนังศีรษะ"
+  }
+]

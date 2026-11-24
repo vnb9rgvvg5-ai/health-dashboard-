@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LANUVA — Scent &amp; Silk ยาสระผมกลิ่นหอมธรรมชาติ</title>
+  <meta name="description" content="Scent &amp; Silk ผมนุ่มลื่นดุจแพรไหม หอมละมุนจากธรรมชาติตลอดวัน ยาสระผมกลิ่นกุหลาบและลาเวนเดอร์จาก LANUVA">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ส่วนเฉพาะหน้าแรก (ใช้ token จาก style.css) */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: calc(100vh - 4.5rem);
+      min-height: calc(100svh - 4.5rem);
+      text-align: center;
+    }
+    .hero h1 { margin-bottom: 0; }
+    .hero__brand {
+      display: block;
+      font-size: var(--fs-hero);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: 0.04em;
+    }
+    .hero__tagline {
+      display: block;
+      max-width: 34rem;
+      margin: var(--sp-3) auto 0;
+      font-family: var(--font-serif-th);
+      font-size: var(--fs-lg);
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-soft);
+    }
+    .hero .rule { margin: var(--sp-4) auto; }
+    .hero .btn { margin-top: 0; }
+
+    .mood-grid { max-width: 52rem; margin-inline: auto; gap: var(--sp-4); }
+
+    .mood-card {
+      display: block;
+      padding: var(--sp-4) var(--sp-3);
+      background: var(--ivory);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      color: inherit;
+      transition: border-color 0.4s var(--ease);
+    }
+    .mood-card:hover { color: inherit; border-color: var(--gold); }
+    .mood-card h3 { margin-bottom: 0; font-size: var(--fs-lg); }
+    .mood-card p  { margin-bottom: 0; font-size: var(--fs-sm); }
+
+    @media (max-width: 30rem) {
+      .hero { min-height: calc(100svh - 6.5rem); }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <span class="hero__brand" lang="en">Scent &amp; Silk</span>
+          <span class="hero__tagline">เปลี่ยนทุกการสระผมให้เป็นช่วงเวลาแห่งการบำรุง สัมผัสผมนุ่มลื่นดุจแพรไหม พร้อมกลิ่นหอมธรรมชาติที่ติดทนนานตลอดวัน</span>
+        </h1>
+        <span class="rule" aria-hidden="true"></span>
+        <a href="product.html" class="btn">ดูสินค้าทั้งหมด</a>
+      </div>
+    </section>
+
+    <section class="section section--white" id="moods">
+      <div class="container">
+        <div class="section-head text-center">
+          <h2>เลือกกลิ่นตามอารมณ์</h2>
+          <span class="rule" aria-hidden="true"></span>
+          <p>เลือกกลิ่นที่ใช่ในวันนี้ เพื่อดูสินค้าที่เข้ากับคุณ</p>
+        </div>
+
+        <div class="grid grid--2 mood-grid">
+          <a class="mood-card" data-mood="rose" href="product.html?mood=rose">
+            <h3 lang="en">Rose</h3>
+            <span class="mood-rule" aria-hidden="true"></span>
+            <p>กลิ่นหอมหรูหราและอ่อนหวานของกลีบกุหลาบ มอบความรู้สึกนุ่มนวล น่าทะนุถนอม ช่วยเสริมเสน่ห์ความหอมละมุนให้เส้นผมอย่างเป็นธรรมชาติ</p>
+          </a>
+
+          <a class="mood-card" data-mood="lavender" href="product.html?mood=lavender">
+            <h3 lang="en">Lavender</h3>
+            <span class="mood-rule" aria-hidden="true"></span>
+            <p>กลิ่นหอมหวานอบอุ่นและนุ่มนวลแบบธรรมชาติ ให้ความรู้สึกสดใส เป็นกันเอง และมอบสัมผัสแห่งการบำรุงอย่างล้ำลึก</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <p style="margin-top: var(--sp-2);">Scent &amp; Silk ผมนุ่มลื่นดุจแพรไหม หอมละมุนจากธรรมชาติตลอดวัน</p>
+      <div class="footer-bottom">&copy; 2026 LANUVA</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

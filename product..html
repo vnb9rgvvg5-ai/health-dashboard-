@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สินค้าทั้งหมด — LANUVA</title>
+  <meta name="description" content="ยาสระผม LANUVA Scent &amp; Silk กลิ่นกุหลาบและลาเวนเดอร์ ขนาด 100 ml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Thai:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ส่วนเฉพาะหน้าสินค้า (ใช้ token จาก style.css) */
+    .page-title { font-size: var(--fs-xl); margin-bottom: 0; }
+
+    #filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--sp-2);
+      margin-bottom: var(--sp-5);
+    }
+    #filter-bar .btn { padding: 0.7rem 1.75rem; }
+
+    #product-list {
+      max-width: 58rem;
+      margin-inline: auto;
+    }
+    #product-list > .muted { grid-column: 1 / -1; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html" aria-current="page">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--cream">
+      <div class="container">
+        <div class="section-head text-center">
+          <h1 class="page-title">สินค้าทั้งหมด</h1>
+          <span class="rule" aria-hidden="true"></span>
+          <p>ยาสระผม Scent &amp; Silk ขนาด 100 ml เลือกกลิ่นที่ใช่สำหรับคุณ</p>
+        </div>
+
+        <div id="filter-bar" role="group" aria-label="กรองสินค้าตามกลิ่น"></div>
+
+        <div id="product-list" class="product-grid" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="logo">LANUVA</a>
+      <p style="margin-top: var(--sp-2);">Scent &amp; Silk ผมนุ่มลื่นดุจแพรไหม หอมละมุนจากธรรมชาติตลอดวัน</p>
+      <div class="footer-bottom">&copy; 2026 LANUVA</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
